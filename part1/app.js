@@ -58,6 +58,6 @@ async function main(){
             }
         });
 
-        //
+        // api/walkrequests/open
     }
 }
