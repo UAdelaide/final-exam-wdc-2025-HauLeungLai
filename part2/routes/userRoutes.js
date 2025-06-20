@@ -63,8 +63,9 @@ router.get('/choosedog', async (req, res) => {
     const [rows] = await pool.execute(
       `SELECT d.dog_id, d.name FROM Dogs d JOIN Users u ON d.owner_id = u.user_id WHERE u.username = ?`,
       [req.session.user.username]
-    )
-  }
+    );
+    res.json(rows);
+  }catch (err) {}
 })
 
 module.exports = router;
