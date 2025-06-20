@@ -12,6 +12,6 @@ async function main(){
             database: 'DogWalkService'
         });
 
-        await
+        await 
     }
 }
