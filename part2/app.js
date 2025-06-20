@@ -24,7 +24,7 @@ const pool = require('./models/db');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
-
+app.use('/api/dogs', )
 // login verification logic
 app.post('/api/login', async (req, res) => {
     const { username, password } = req.body;
