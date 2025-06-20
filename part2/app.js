@@ -28,7 +28,8 @@ app.post('/api/login', async (req, res) => {
 
     try {
         const [rows] = await getConnection.execute(
-            `SELECT username, role FROM Users WHERE username = ? AND password`
+            `SELECT username, role FROM Users WHERE username = ? AND password_hash = ?`,
+            
         )
     }
 })
