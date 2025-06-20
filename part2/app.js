@@ -27,7 +27,8 @@ app.post('/api/login', async (req, res) => {
     const { username, password } = req.body;
 
     try {
-        const [rows] = await getConnection.execute(
+        const conn = await getConnection();
+        const 
 
         if (rows.length > 0){
             req.session.user = {
