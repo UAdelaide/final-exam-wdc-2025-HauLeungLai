@@ -87,7 +87,7 @@ async function main(){
                     ROUND(AVG(r.rating), 1) AS average_rating,
                     COUNT(DISTINCT wr.request_id) AS completed_walks
                     FROM users u
-                    LEFT 
+                    LEFT JOIN walkerquests wr ON u.user_id = wr.accepted
                     `)
             }
         })
