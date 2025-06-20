@@ -98,6 +98,7 @@ async function main(){
                 res.status(500).json({ error: 'Failed to fetch walkers summary.'});
             }
         });
+        app
     }
 }
 
