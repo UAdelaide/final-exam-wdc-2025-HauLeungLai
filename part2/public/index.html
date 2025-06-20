@@ -57,11 +57,11 @@
               alert('Unknown role.');
             }
           } catch (err) {
-            alert('Login failed: ')
+            alert('Login failed: ' + err.message);
           }
         }
       }
-    })
+    }).mount
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
