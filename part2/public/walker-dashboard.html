@@ -93,7 +93,8 @@
         }
 
         onMounted(() => {
-          currentUserId.value = await
+          currentUserId.value = await getCurrentUser();
+          if (currentUserId.value){}
           loadWalkRequests();
         });
         // logout handle
