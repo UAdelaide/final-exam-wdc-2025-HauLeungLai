@@ -65,8 +65,9 @@ async function main(){
                     SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username
                     FROM walkrequests wr
                     JOIN dogs d ON wr.dog_id = d.dog_id
-                    JOIN users u ON wr.owner_id = u.user
-                    `)
+                    JOIN users u ON wr.owner_id = u.user_id
+                    WHERE wr.status = 'open'
+                    `);
             }
         })
     }
