@@ -62,7 +62,8 @@
       async mounted() {
         try {
           const res = await fetch('/api/dogs');
-          const dogs 
+          const dogs = await res.json();
+          for (const dog of dogs )
         }
       }
 
