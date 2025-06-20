@@ -54,4 +54,4 @@ CREATE TABLE WalkRatings (
     CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
 );
 
-CREATE TYPE user_role AS EU
+CREATE TYPE user_role AS ENUM ('owner', 'walker');
