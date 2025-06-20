@@ -102,7 +102,7 @@ async function main(){
             console.log(`Server running at http://localhost:${PORT}`);
         });
     } catch (err) {
-        console.error("S")
+        console.error("Startup Error", err);
     }
 }
 
