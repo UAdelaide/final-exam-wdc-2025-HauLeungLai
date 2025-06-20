@@ -191,7 +191,9 @@ function login(){
             if(response.role === 'owner'){
                 window.location.href = "owner-dashboard.html";
             } else if(response.role === 'walker'){
-                window.location.href = "walker"
+                window.location.href = "walker-dashboard.hmtl";
+            } else {
+                alert("Unknown role")
             }
     };
 
