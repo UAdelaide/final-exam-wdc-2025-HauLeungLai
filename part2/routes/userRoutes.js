@@ -34,7 +34,8 @@ router.get('/me', (req, res) => {
   }
   res.json({
     user_id: req.session.user.user_id,
-    username: req
+    username: req.session.user.username,
+    role: req.session.user.role
   }
 
   );
