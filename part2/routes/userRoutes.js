@@ -66,7 +66,8 @@ router.get('/choosedog', async (req, res) => {
     );
     res.json(rows);
   }catch (err) {
-    console.error ('Fetch dog l')
+    console.error ('Fetch dog list fail', err);
+    res.status(500)
   }
 })
 
