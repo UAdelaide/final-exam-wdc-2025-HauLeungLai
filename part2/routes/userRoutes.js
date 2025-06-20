@@ -69,6 +69,6 @@ router.get('/choosedog', async (req, res) => {
     console.error ('Fetch dog list fail', err);
     res.status(500).json({error: 'Server Error'});
   }
-})
+});
 
 module.exports = router;
