@@ -28,7 +28,9 @@ app.post('/api/login', async (req, res) => {
 
     try {
         const conn = await getConnection();
-        const 
+        const [rows] = await conn.execute(
+            `SELECT username, role`
+        )
 
         if (rows.length > 0){
             req.session.user = {
