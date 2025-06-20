@@ -50,15 +50,15 @@
         const currentUserId = ref(null);
 
         async function getCurrentUser(){
-          try{
+          try {
             const res = await fetch('/api/users/me', {
               credentials: "include"
             });
             if (!res.ok) throw new Error('Not authenticated');
             const user = await res.json();
             currentUserId.value = user.user_id;
-            console.log('Current User Id:', currentUserId.value);
-          }catch (err) {
+            console.log('Current User ID:', currentUserId.value);
+          } catch (err) {
             error.value = 'Failed to get current user';
             return null;
           }
