@@ -52,7 +52,8 @@ app.post('/api/login', async (req, res) => {
 app.post('/api/logout', (req, res) => {
     req.session.destroy(err => {
         if (err) {
-            console.error('E')
+            console.error('Error destroying session:', err);
+            return res.status(500)
         }
     })
 })
