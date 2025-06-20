@@ -29,13 +29,14 @@ app.post('/api/login', async (req, res) => {
     try {
         const conn = await pool.getConnection();
         const [rows] = await conn.execute(
-            `SELECT userusername, role FROM Users WHERE username = ? AND password_hash = ?`,
+            `SELECT user_id, username, role FROM Users WHERE username = ? AND password_hash = ?`,
             [username, password]
         );
         conn.release();
 
         if (rows.length > 0){
             req.session.user = {
+                
                 username:rows[0].username,
                 role: rows[0].role
             };
