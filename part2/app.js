@@ -31,7 +31,8 @@ app.post('/api/login', async (req, res) => {
         const [rows] = await conn.execute(
             `SELECT username, role FROM Users WHERE username = ? AND password_hash = ?`
             [username, password]
-        )
+        );
+        conn.release();
 
         if (rows.length > 0){
             req.session.user = {
