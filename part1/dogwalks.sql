@@ -56,4 +56,6 @@ CREATE TABLE WalkRatings (
 
 CREATE TYPE user_role AS ENUM ('owner', 'walker');
 
-CREATE TABLE 
+CREATE TABLE users (
+    user_id 
+)
