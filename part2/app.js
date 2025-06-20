@@ -29,7 +29,7 @@ app.post('/api/login', async (req, res) => {
     try {
         const conn = await pool.getConnection();
         const [rows] = await conn.execute(
-            `SELECT username, role FROM Users WHERE username = ? AND password_hash = ?`,
+            `SELECT userusername, role FROM Users WHERE username = ? AND password_hash = ?`,
             [username, password]
         );
         conn.release();
