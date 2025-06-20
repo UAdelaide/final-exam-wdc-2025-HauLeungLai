@@ -29,7 +29,7 @@ async function main(){
             ((SELECT user_id FROM Users Where username = 'alice123'), 'Rocky', 'large'),
             ((SELECT user_id FROM Users Where username = 'emily456'), 'Luna', 'medium'),
             ((SELECT user_id FROM Users Where username = 'carol123'), 'Charlie', 'small');
-            `)
+            `);
         await connection.execute(`
             INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
             ((SELECT dog_id FROM Dogs WHERE name = 'Max' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
@@ -37,7 +37,7 @@ async function main(){
             ((SELECT dog_id FROM Dogs WHERE name = 'Rocky' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')), '2025-06-10 07:00:00', 60, 'South Terrace ', 'open'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Luna' AND owner_id = (SELECT user_id FROM Users WHERE username = 'emily456')), '2025-06-10 17:00:00', 60, 'South Terrace', 'cancelled'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Charlie' AND owner_id = (SELECT user_id FROM Users WHERE username = 'carol123')), '2025-06-10 17:00:00', 60, 'South Terrace', 'open');
-            `)
+            `);
         await connection.execute(`
             INSERT INTO ratings (request_id, rating) VALUES
             ((SELECT request_id FROM walkrequests WHERE status = 'completed' AND
@@ -60,7 +60,8 @@ async function main(){
         });
 
         // api/walkrequests/open
-        // Return all open walk requests, including the dog name, requested time, location, and owner's username.
+        // Return all open walk requests,
+        // including the dog name, requested time, location, and owner's username.
         app.get('/api/walkrequests/open', async (req, res) => {
             try {
                 const [rows] = await connection.execute(`
