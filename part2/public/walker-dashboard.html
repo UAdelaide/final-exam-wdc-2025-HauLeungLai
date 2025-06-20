@@ -58,7 +58,8 @@
             const user = await res.json();
             return user.user_id;
           }catch (err) {
-            error.value = 
+            error.value = 'Failed to get current user';
+            return null;
           }
         }
 
