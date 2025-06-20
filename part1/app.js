@@ -41,7 +41,7 @@ async function main(){
         await connection.execute(`
             INSERT INTO ratings (request_id, rating) VALUES
             ((SELECT request_id FROM walkrequests WHERE status = 'completed' AND
-            dog_id = (SELECT dog_id FROM dogs WHERE name = 'Max')), 5)
+            dog_id = (SELECT dog_id FROM dogs WHERE name = 'Charlie')), 5)
         `);
 
         // /api/dogs
