@@ -86,7 +86,8 @@ async function main(){
                     COUNT(r.rating_id) AS total_ratings,
                     ROUND(AVG(r.rating), 1) AS average_rating,
                     COUNT(DISTINCT wr.request_id) AS completed_walks
-                    
+                    FROM users u
+                    LEFT 
                     `)
             }
         })
