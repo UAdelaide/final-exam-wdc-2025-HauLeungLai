@@ -3,4 +3,8 @@ const mysql = require('mysql12/promise');
 const app = express();
 const PORT = 8080;
 
-async 
+async function main(){
+    try {
+
+    }
+}
