@@ -63,7 +63,9 @@
         try {
           const res = await fetch('/api/dogs');
           const dogs = await res.json();
-          for (const dog of dogs )
+          for (const dog of dogs) {
+            cosnt imgRes = await fetch('')
+          }
         }
       }
 
