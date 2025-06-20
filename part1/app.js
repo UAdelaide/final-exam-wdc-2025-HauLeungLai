@@ -46,7 +46,7 @@ async function main(){
 
         // /api/dogs
         // Return a list of all dogs with their size and owner's username
-        app.get('/api/dogs', async (req, res) =>{
+        app.get('/api/dogs', async (req, res) => {
             try {
                 const [rows] = await connection.execute(`
                     SELECT d.name AS dog_name, d.size, u.username AS owner_username
@@ -99,7 +99,7 @@ async function main(){
                 res.status(500).json({ error: 'Failed to fetch walkers summary.'});
             }
         });
-        app.listen(PORT, () =>{
+        app.listen(PORT, () => {
             console.log(`Server running at http://localhost:${PORT}`);
         });
     } catch (err) {
