@@ -62,7 +62,7 @@ async function main(){
         // api/walkrequests/open
         // Return all open walk requests,
         // including the dog name, requested time, location, and owner's username.
-        app.get('/api/walkrequests/open', async (req, res) => {
+        app.get('/api/walkRequests/open', async (req, res) => {
             try {
                 const [rows] = await connection.execute(`
                     SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username
