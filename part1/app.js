@@ -45,6 +45,8 @@ async function main(){
         `);
 
         // /api/dogs - return all the information of dogs
-        app.get('api/dogs', async (req, res) =>)
+        app.get('api/dogs', async (req, res) =>{
+            
+        })
     }
 }
