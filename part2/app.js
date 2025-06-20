@@ -50,7 +50,11 @@ app.post('/api/login', async (req, res) => {
 
 // Logout route
 app.post('/api/logout', (req, res) => {
-    req.session.destroy
+    req.session.destroy(err => {
+        if (err) {
+            console.error('E')
+        }
+    })
 })
 
 // Export the app instead of listening here
