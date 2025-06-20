@@ -75,6 +75,6 @@ async function main(){
             }
         });
 
-        // /api/walks
+        // /api/walkers/summary
     }
 }
