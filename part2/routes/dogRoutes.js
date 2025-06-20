@@ -7,5 +7,7 @@ router.get('/', async (req, res) => {
     try {
         const [rows] = await pool.query('SELECT * FROM Dogs');
         res.json(rows);
+    }catch (error) {
+        console.error("")
     }
 })
