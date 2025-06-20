@@ -41,7 +41,7 @@ app.post('/api/login', async (req, res) => {
             };
             return res.json({ role: rows[0].role});
         }
-        res.status(401).json({error: 'Invalid cre'})
+        res.status(401).json({error: 'Invalid credentials'})
     }catch (err) {
         console.error(err);
         res.status(500).json({error:'Sever error during login'});
