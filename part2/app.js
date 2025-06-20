@@ -39,7 +39,7 @@ app.post('/api/login', async (req, res) => {
                 username:rows[0].username,
                 role: rows[0].role
             };
-            res.json({ role: rows[0].role});
+            return res.json({ role: rows[0].role});
         }
     }catch (err) {
         console.error(err);
