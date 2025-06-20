@@ -23,7 +23,7 @@ app.use('/api/users', userRoutes);
 
 // login verification logic
 app.post('/api/login', async (req, res) => {
-    
+    const { username, password } = req.body;
 })
 
 // Export the app instead of listening here
