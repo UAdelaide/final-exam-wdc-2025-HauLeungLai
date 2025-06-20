@@ -41,7 +41,7 @@ async function main(){
         await connection.execute(`
             INSERT IGNORE INTO WalkRatings (request_id, rating, walker_id, owner_id) VALUES
             ((SELECT request_id FROM WalkRequests WHERE status = 'completed' AND
-            dog_id = (SELECT dog_id FROM dogs WHERE name = 'Charlie')), 5)
+            dog_id = (SELECT dog_id FROM Dogs WHERE name = 'Charlie')), 5)
         `);
 
         // /api/dogs
