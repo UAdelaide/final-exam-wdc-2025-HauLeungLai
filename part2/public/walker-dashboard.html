@@ -56,7 +56,7 @@
             });
             if (!res.ok) throw new Error('Not authenticated');
             const user = await res.json();
-            return user.user_id;
+            currentUserId.value = user.user_id;
           }catch (err) {
             error.value = 'Failed to get current user';
             return null;
