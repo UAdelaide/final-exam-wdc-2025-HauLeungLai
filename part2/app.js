@@ -41,9 +41,9 @@ app.post('/api/login', async (req, res) => {
         }
     }catch (err) {
         console.error(err);
-        res.status(500).json({error:})
+        res.status(500).json({error:'Sever error during login'});
     }
-})
+});
 
 // Export the app instead of listening here
 module.exports = app;
