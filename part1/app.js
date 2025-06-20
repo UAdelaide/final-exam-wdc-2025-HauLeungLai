@@ -74,7 +74,7 @@ async function main(){
                     JOIN users u ON d.owner_id = u.user_id
                     WHERE wr.status = 'open'
                     `);
-                    res.json(rows);
+                    res.json(rows); 
             } catch (err) {
                 console.error(err);
                 res.status(500).json({ error: 'Failed to fetch open walk requests.'});
