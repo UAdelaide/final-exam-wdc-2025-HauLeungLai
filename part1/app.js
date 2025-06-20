@@ -40,7 +40,7 @@ async function main(){
             `)
         await connection.execute(`
             INSERT INTO rating (request_id, rating) VALUES
-            ((SELECT request_id FROM walkrequests WHERE)
+            ((SELECT request_id FROM walkrequests WHERE status = 'completed' AND dog)
         `)
     }
 }
