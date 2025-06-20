@@ -44,6 +44,7 @@ async function main(){
             dog_id = (SELECT dog_id FROM dogs WHERE name = 'Max')), 5)
         `);
 
-        // /api/dogs - return all the dogs 
+        // /api/dogs - return all the information of dogs
+        app.get
     }
 }
