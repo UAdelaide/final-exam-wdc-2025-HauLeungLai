@@ -61,7 +61,7 @@ router.get('/choosedog', async (req, res) => {
   }
   try {
     const [rows] = await pool.execute(
-      `SELECT d.dog_id, d`
+      `SELECT d.dog_id, d.name FROM Dogs d JOIN Users u `
     )
   }
 })
