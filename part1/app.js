@@ -50,7 +50,8 @@ async function main(){
                 const [rows] = await connection.execute(`
                     SELECT d.name AS dog_name, d.size, u.username AS owner_username
                     FROM dogs d JOIN users u ON d.owner_id = u.user_id
-                    `)
+                    `);
+                    res.json(rows);
             }
         })
     }
