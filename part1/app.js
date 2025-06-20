@@ -45,6 +45,6 @@ async function main(){
         `);
 
         // /api/dogs - return all the information of dogs
-        app.get
+        app.get('api/dogs', )
     }
 }
