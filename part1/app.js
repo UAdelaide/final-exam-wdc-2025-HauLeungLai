@@ -70,8 +70,8 @@ async function main(){
                 const [rows] = await connection.execute(`
                     SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username
                     FROM walkRequests wr
-                    JOIN dogs d ON wr.dog_id = d.dog_id
-                    JOIN users u ON d.owner_id = u.user_id
+                    JOIN Dogs d ON wr.dog_id = d.dog_id
+                    JOIN Users u ON d.owner_id = u.user_id
                     WHERE wr.status = 'open'
                     `);
                     res.json(rows);
@@ -90,7 +90,7 @@ async function main(){
                     COUNT(r.rating_id) AS total_ratings,
                     ROUND(AVG(r.rating), 1) AS average_rating,
                     COUNT(DISTINCT wr.request_id) AS completed_walks
-                    FROM users u
+                    FROM Users u
                     LEFT JOIN walkRequests wr ON u.user_id = wr.accepted_walker_id AND wr.status = 'completed'
                     LEFT JOIN ratings r ON wr.request_id = r.request_id
                     WHERE u.role = 'walker'
