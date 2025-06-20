@@ -92,7 +92,10 @@
           }
         }
 
-        onMounted(() => {})
+        onMounted(() => {
+          console.log('Walker dash');
+          loadWalkRequests()
+        })
 
         // logout handle
         async function handleLogout(){
