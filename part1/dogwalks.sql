@@ -57,6 +57,7 @@ CREATE TABLE WalkRatings (
 CREATE TYPE user_role AS ENUM ('owner', 'walker');
 
 CREATE TABLE users (
-    user_id SERIAL PRIMARY KEY,
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
     
+
 )
