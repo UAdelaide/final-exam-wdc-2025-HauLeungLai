@@ -92,6 +92,7 @@ async function main(){
                     WHERE u.role = 'walker'
                     GROUP BY u.username
                     `);
+                    res.json(rows);
             }
         })
     }
