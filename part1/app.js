@@ -54,7 +54,7 @@ async function main(){
                     res.json(rows);
             } catch(err) {
                 console.error(err);
-                res.status
+                res.status(500).jsopn
             }
         })
     }
