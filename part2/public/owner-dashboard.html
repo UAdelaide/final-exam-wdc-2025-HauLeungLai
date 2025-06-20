@@ -92,7 +92,7 @@
           try {
             const res = await fetch('/api/dogs');
             const all = await res.json();
-            dogs.value = all.filter(d => d.owner_username)
+            dogs.value = all.filter(d => d.owner_username ===)
           }
         }
 
