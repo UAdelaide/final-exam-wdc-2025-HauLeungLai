@@ -22,7 +22,9 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 // login verification logic
-app.post('/api/login', async (this.request,))
+app.post('/api/login', async (req, res) => {
+    
+})
 
 // Export the app instead of listening here
 module.exports = app;
