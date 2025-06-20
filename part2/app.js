@@ -33,7 +33,10 @@ app.post('/api/login', async (req, res) => {
         );
 
         if (rows.length > 0){
-            req.session.user = 
+            req.session.user = {
+                username:rows[0].usename,
+                role: rows[0].role
+            }
         }
     }
 })
