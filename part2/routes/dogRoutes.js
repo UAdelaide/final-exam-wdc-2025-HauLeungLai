@@ -8,6 +8,6 @@ router.get('/', async (req, res) => {
         const [rows] = await pool.query('SELECT * FROM Dogs');
         res.json(rows);
     }catch (error) {
-        console.error("")
+        console.error('Failed to fetch dogs:', error);
     }
 })
