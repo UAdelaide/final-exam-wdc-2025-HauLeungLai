@@ -44,7 +44,8 @@ async function main(){
             dog_id = (SELECT dog_id FROM dogs WHERE name = 'Max')), 5)
         `);
 
-        // /api/dogs - return all the information of dogs
+        // /api/dogs
+        //  return all the information of dogs
         app.get('api/dogs', async (req, res) =>{
             try {
                 const [rows] = await connection.execute(`
@@ -58,7 +59,8 @@ async function main(){
             }
         });
 
-        // api/walkrequests/open - return all the request of status 'open'
+        // api/walkrequests/open
+        // Return all open walk requests, including the dog name, requested time, location, and owner's username.
         app.get('/api/walkrequests/open', async (req, res) => {
             try {
                 const [rows] = await connection.execute(`
