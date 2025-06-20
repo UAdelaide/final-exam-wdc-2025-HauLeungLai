@@ -60,7 +60,9 @@ router.get('/choosedog', async (req, res) => {
     return res.status(401).json({ error: 'Not login yet'});
   }
   try {
-    const [rows] = await pool.e
+    const [rows] = await pool.execute(
+      `SELECT d.dog_id, d`
+    )
   }
 })
 
