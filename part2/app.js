@@ -36,7 +36,7 @@ app.post('/api/login', async (req, res) => {
 
         if (rows.length > 0){
             req.session.user = {
-                username:rows[0].usename,
+                username:rows[0].username,
                 role: rows[0].role
             };
             res.json({ role: rows[0].role});
