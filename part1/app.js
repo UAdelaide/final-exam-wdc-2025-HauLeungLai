@@ -12,7 +12,7 @@ async function main(){
             password: '',
             database: 'DogWalkService'
         });
-
+        
         await connection.execute(`
 
             `)
