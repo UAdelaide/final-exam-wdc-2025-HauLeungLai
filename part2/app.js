@@ -39,7 +39,10 @@ app.post('/api/login', async (req, res) => {
             };
             res.json({ role: rows[0].role});
         }
-    }catch
+    }catch (err) {
+        console.error(err);
+        res.status(500).json
+    }
 })
 
 // Export the app instead of listening here
