@@ -15,7 +15,8 @@ async function main(){
 
         // insert test data
         await connection.execute(`
-            INSERT INTO users(username)
+            INSERT INTO users(username, email, password_hash, role) VALUES
+            
             `)
     }
 }
