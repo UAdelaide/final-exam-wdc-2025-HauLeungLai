@@ -13,9 +13,9 @@ async function main(){
             database: 'DogWalkService'
         });
 
-        //
+        // insert test data
         await connection.execute(`
-
+            
             `)
     }
 }
