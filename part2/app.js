@@ -29,7 +29,7 @@ app.post('/api/login', async (req, res) => {
     try {
         const conn = await getConnection();
         const [rows] = await conn.execute(
-            `SELECT username, role`
+            `SELECT username, role FROM Users WHERE username = ? AND password_has`
         )
 
         if (rows.length > 0){
