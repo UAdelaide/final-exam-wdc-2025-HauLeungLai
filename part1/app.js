@@ -69,7 +69,10 @@ async function main(){
                     WHERE wr.status = 'open'
                     `);
                     res.json(rows);
-            } catch
+            } catch (err) {
+                console.error(err);
+                res.status(500)
+            }
         })
     }
 }
