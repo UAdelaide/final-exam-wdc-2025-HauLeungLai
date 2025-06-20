@@ -99,7 +99,7 @@ async function main(){
             }
         });
         app.listen(PORT, () =>{
-            console.log(``)
+            console.log(`Server running at http://localhost:$`)
         })
     }
 }
