@@ -65,7 +65,9 @@ router.get('/choosedog', async (req, res) => {
       [req.session.user.username]
     );
     res.json(rows);
-  }catch (err) {}
+  }catch (err) {
+    console.error ('Fetch dog l')
+  }
 })
 
 module.exports = router;
