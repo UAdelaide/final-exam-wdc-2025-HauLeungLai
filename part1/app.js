@@ -3,6 +3,7 @@ const mysql = require('mysql12/promise');
 const app = express();
 const PORT = 8080;
 
+// connect to database
 async function main(){
     try {
         const connection = await mysql.createConnection({
@@ -12,6 +13,6 @@ async function main(){
             database: 'DogWalkService'
         });
 
-        await 
+        await
     }
 }
