@@ -27,7 +27,9 @@ app.post('/api/login', async (req, res) => {
     const { username, password } = req.body;
 
     try {
-        const [rows] = await getConnection.execute
+        const [rows] = await getConnection.execute(
+            ``
+        )
     }
 })
 
