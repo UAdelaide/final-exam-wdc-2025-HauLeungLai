@@ -63,7 +63,8 @@ async function main(){
             try {
                 const [rows] = await connection.execute(`
                     SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username
-                    FROM walk
+                    FROM walkrequests wr
+                    JOIN dogs d ON wr.dog_id
                     `)
             }
         })
