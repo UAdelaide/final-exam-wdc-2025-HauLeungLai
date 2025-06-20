@@ -70,11 +70,9 @@
           }
           this.dogs = dogs;
         }catch (err) {
-          console.error('Failed to load dogs: ')
+          console.error('Failed to load dogs: ', err);
         }
-      }
-
-
+      },
 
       methods: {
         async handleLogin() {
