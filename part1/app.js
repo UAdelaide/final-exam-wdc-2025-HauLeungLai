@@ -9,7 +9,7 @@ async function main(){
             host: 'localhost',
             user: 'root',
             password: '',
-            database: 'dogwalking'
+            database: 'DogWalkService'
         }
         )
     }
