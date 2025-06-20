@@ -58,6 +58,6 @@ async function main(){
             }
         });
 
-        // api/walkrequests/open
+        // api/walkrequests/open - return all the request
     }
 }
