@@ -17,7 +17,7 @@ app.use(session({
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-const { getConnection } = require('./models/db');
+const pool = require('./')
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
