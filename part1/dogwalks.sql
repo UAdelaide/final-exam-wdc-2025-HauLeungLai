@@ -54,10 +54,3 @@ CREATE TABLE WalkRatings (
     CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
 );
 
-INSERT INTO Dogs (owner_id, name, size)
-VALUES
-((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
-((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
-((SELECT user_id FROM Users WHERE username = 'alice123'), 'Rocky', 'large'),
-((SELECT user_id FROM Users WHERE username = 'emily456'), 'Luna', 'medium'),
-((SELECT user_id FROM Users WHERE username = 'carol123'), 'Charlie', 'small');
