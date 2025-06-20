@@ -69,7 +69,9 @@
             dog.photo = imgData.message;
           }
           this.dogs = dogs;
-        }catch
+        }catch (err) {
+          console.error('Failed to load dogs: ')
+        }
       }
 
 
