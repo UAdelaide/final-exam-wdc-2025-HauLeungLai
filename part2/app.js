@@ -32,7 +32,9 @@ app.post('/api/login', async (req, res) => {
             [username, password]
         );
 
-        if (row)
+        if (rows.length > 0){
+            req.session.user = 
+        }
     }
 })
 
