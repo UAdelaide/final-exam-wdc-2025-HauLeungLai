@@ -89,8 +89,9 @@ async function main(){
                     FROM users u
                     LEFT JOIN walkerquests wr ON u.user_id = wr.accepted_walker_id AND wr.status = 'completed'
                     LEFT JOIN ratings r ON wr.request_id = r.request_id
-                    WHERE u.role = 'walker
-                    `)
+                    WHERE u.role = 'walker'
+                    GROUP BY u.username
+                    `);
             }
         })
     }
