@@ -34,13 +34,9 @@ async function main(){
             INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
             VALUES
             ((SELECT dog_id FROM Dogs WHERE name = 'Max' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
-
             ((SELECT dog_id FROM Dogs WHERE name = 'Bella' AND owner_id = (SELECT user_id FROM Users WHERE username = 'carol123')), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
-
             ((SELECT dog_id FROM Dogs WHERE name = 'Rocky' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')), '2025-06-10 07:00:00', 60, 'South Terrace ', 'open'),
-
             ((SELECT dog_id FROM Dogs WHERE name = 'Luna' AND owner_id = (SELECT user_id FROM Users WHERE username = 'emily456')), '2025-06-10 17:00:00', 60, 'South Terrace', 'cancelled'),
-
             ((SELECT dog_id FROM Dogs WHERE name = 'Charlie' AND owner_id = (SELECT user_id FROM Users WHERE username = 'carol123')), '2025-06-10 17:00:00', 60, 'South Terrace', 'open');
             `)
     }
