@@ -59,7 +59,9 @@ router.get('/choosedog', async (req, res) => {
   if (!req.session.user) {
     return res.status(401).json({ error: 'Not login yet'});
   }
-  try
+  try {
+    const [rows] = await pool.e
+  }
 })
 
 module.exports = router;
