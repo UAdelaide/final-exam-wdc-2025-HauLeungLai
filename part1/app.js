@@ -40,7 +40,7 @@ async function main(){
             `);
         await connection.execute(`
             INSERT IGNORE INTO WalkRatings (request_id, rating) VALUES
-            ((SELECT request_id FROM walkrequests WHERE status = 'completed' AND
+            ((SELECT request_id FROM walkRequests WHERE status = 'completed' AND
             dog_id = (SELECT dog_id FROM dogs WHERE name = 'Charlie')), 5)
         `);
 
@@ -66,7 +66,7 @@ async function main(){
             try {
                 const [rows] = await connection.execute(`
                     SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username
-                    FROM walkrequests wr
+                    FROM walkRequests wr
                     JOIN dogs d ON wr.dog_id = d.dog_id
                     JOIN users u ON d.owner_id = u.user_id
                     WHERE wr.status = 'open'
@@ -88,7 +88,7 @@ async function main(){
                     ROUND(AVG(r.rating), 1) AS average_rating,
                     COUNT(DISTINCT wr.request_id) AS completed_walks
                     FROM users u
-                    LEFT JOIN walkrequests wr ON u.user_id = wr.accepted_walker_id AND wr.status = 'completed'
+                    LEFT JOIN walkRequests wr ON u.user_id = wr.accepted_walker_id AND wr.status = 'completed'
                     LEFT JOIN ratings r ON wr.request_id = r.request_id
                     WHERE u.role = 'walker'
                     GROUP BY u.username
