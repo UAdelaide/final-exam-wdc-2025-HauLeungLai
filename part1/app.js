@@ -91,7 +91,7 @@ async function main(){
                     ROUND(AVG(r.rating), 1) AS average_rating,
                     COUNT(DISTINCT wr.request_id) AS completed_walks
                     FROM Users u
-                    LEFT JOIN WalkRatings r ON wr.request_id = r.request_id
+                    LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
                     WHERE u.role = 'walker'
                     GROUP BY u.username
                     `);
