@@ -7,7 +7,7 @@ async function main(){
     try {
         const connection = await mysql.createConnection({
             host: 'localhost',
-            user
+            user: 'root'
         }
         )
     }
