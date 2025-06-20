@@ -5,6 +5,7 @@ const pool = require('../models/db');
 //Return all dogs in the system
 router.get('/', async (req, res) => {
     try {
-        const [rows] = await pool.query()
+        const [rows] = await pool.query('SELECT * FROM Dogs');
+        res.json(rows);
     }
 })
