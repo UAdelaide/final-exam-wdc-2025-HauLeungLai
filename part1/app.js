@@ -71,7 +71,7 @@ async function main(){
                     res.json(rows);
             } catch (err) {
                 console.error(err);
-                res.status(500).json({ error: 'Failed'})
+                res.status(500).json({ error: 'Failed to fetch open walk requests.'});
             }
         })
     }
