@@ -78,5 +78,8 @@ async function main(){
         });
 
         // /api/walkers/summary
+        // Return a summary of each walker with their average rating and number of completed walks.
+
+        
     }
 }
