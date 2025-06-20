@@ -22,5 +22,8 @@ async function main(){
             ('davewalker', 'dave@example.com', 'hashed000', 'walker'),
             ('emily456', 'emily@example.com', 'hashed111', 'owner');
             `);
+        await connection.execute(`
+
+            `)
     }
 }
