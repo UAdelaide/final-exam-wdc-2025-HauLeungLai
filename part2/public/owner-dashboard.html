@@ -90,7 +90,7 @@
 
         async function loadDogs(){
           try {
-            const res = await fetch('/api/users/choosedog', {credentials});
+            const res = await fetch('/api/users/choosedog', {credentials: 'include'});
             const all = await res.json();
             }catch(err){
             console.error('Failded to load dogs', err);
