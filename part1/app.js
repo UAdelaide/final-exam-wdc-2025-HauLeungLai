@@ -59,6 +59,6 @@ async function main(){
         });
 
         // api/walkrequests/open - return all the request of status 'open'
-        app.get
+        app.get('/api/walkrequests/open', async)
     }
 }
