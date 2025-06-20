@@ -83,7 +83,8 @@ async function main(){
             try {
                 const [rows] = await connection.execute(`
                     SELECT u.username AS walker_username,
-                    COUNT(r.rating_id) AS total_rating
+                    COUNT(r.rating_id) AS total_ratings,
+                    ROUND(AVG )
                     `)
             }
         })
