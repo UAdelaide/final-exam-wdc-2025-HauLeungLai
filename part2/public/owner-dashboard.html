@@ -8,12 +8,13 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body class="bg-light">
+      <!--logout-->
+      <div class="d-flex justify-content-end mb-3">
+        <button @click="handleLogout" class="btn btn-outline-danger">Logout</button>
+      </div>
   <div id="app" class="container py-4">
     <h1 class="mb-4 text-primary">Owner Dashboard</h1>
-    <!--logout-->
-    <div class="d-flex justify-content-end mb-3">
-      <button @click="handleLogout" class="btn btn-outline-danger">Logout</button>
-    </div>
+
     <!-- Walk request form -->
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
