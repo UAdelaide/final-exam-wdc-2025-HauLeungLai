@@ -39,7 +39,7 @@ async function main(){
             ((SELECT dog_id FROM Dogs WHERE name = 'Charlie' AND owner_id = (SELECT user_id FROM Users WHERE username = 'carol123')), '2025-06-10 17:00:00', 60, 'South Terrace', 'completed');
             `);
         await connection.execute(`
-            INSERT IGNORE INTO Ratings (request_id, rating) VALUES
+            INSERT IGNORE INTO WalkRatings (request_id, rating) VALUES
             ((SELECT request_id FROM walkrequests WHERE status = 'completed' AND
             dog_id = (SELECT dog_id FROM dogs WHERE name = 'Charlie')), 5)
         `);
