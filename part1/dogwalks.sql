@@ -53,12 +53,3 @@ CREATE TABLE WalkRatings (
     FOREIGN KEY (owner_id) REFERENCES Users(user_id),
     CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
 );
-
-CREATE TYPE user_role AS ENUM ('owner', 'walker');
-
-CREATE TABLE users (
-    user_id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    eamil VARCHAR(100)
-
-)
