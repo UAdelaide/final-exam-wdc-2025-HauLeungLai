@@ -41,6 +41,7 @@ app.post('/api/login', async (req, res) => {
             };
             return res.json({ role: rows[0].role});
         }
+        res.status
     }catch (err) {
         console.error(err);
         res.status(500).json({error:'Sever error during login'});
