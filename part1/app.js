@@ -43,5 +43,7 @@ async function main(){
             ((SELECT request_id FROM walkrequests WHERE status = 'completed' AND
             dog_id = (SELECT dog_id FROM dogs WHERE name = 'Max')), 5)
         `);
+
+        // /api/dogs - return a
     }
 }
