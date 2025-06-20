@@ -57,8 +57,9 @@ router.post('/login', async (req, res) => {
 
 router.get('/choosedog', async (req, res) => {
   if (!req.session.user) {
-    return res.status(401).json({ error: })
+    return res.status(401).json({ error: 'Not login yet'});
   }
+  try
 })
 
 module.exports = router;
