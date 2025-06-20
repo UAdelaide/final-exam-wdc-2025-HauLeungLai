@@ -195,7 +195,7 @@ function login(){
             } else {
                 alert("Unknown role: " + response.role);
             }
-        }
+        } else if (this.readyState == 4 )
     }
     // Open connection to server & send the post data using a POST request
     // We will cover POST requests in more detail in week 8
