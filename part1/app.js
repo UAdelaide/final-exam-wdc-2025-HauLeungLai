@@ -98,7 +98,9 @@ async function main(){
                 res.status(500).json({ error: 'Failed to fetch walkers summary.'});
             }
         });
-        app
+        app.listen(PORT, () =>{
+            console.log(``)
+        })
     }
 }
 
