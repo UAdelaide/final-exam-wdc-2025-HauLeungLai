@@ -60,7 +60,11 @@ async function main(){
 
         // api/walkrequests/open - return all the request of status 'open'
         app.get('/api/walkrequests/open', async (req, res) => {
-            try {}
+            try {
+                const [rows] = await connection.execute(`
+                    
+                    `)
+            }
         })
     }
 }
