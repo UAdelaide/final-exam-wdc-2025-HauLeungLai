@@ -75,6 +75,11 @@
         }
 
         async function applyToWalk(requestId) {
+          try {
+    if (!currentUserId.value) {
+      await getCurrentUser();
+    }
+
           console.log("Applt to walk. Walkerid: ", currentUserId.value);
 
           try {
