@@ -125,7 +125,8 @@
         async function handleLogout(){
           try{
             const res = await fetch('/api/logout', {method: 'POST'});
-            if (!res.ok) throw new Error()
+            if (!res.ok) throw new Error('Logout failed');
+            window.location.href = 
           }
         }
 
