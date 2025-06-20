@@ -190,7 +190,9 @@ function login(){
             const response = JSON.parse(this.responseText);
             if(response.role === 'owner'){
                 window.location.href = "owner-dashboard.html";
-            } else if(response.role)
+            } else if(response.role === 'walker'){
+                window.location.href = "walker"
+            }
     };
 
     // Open connection to server & send the post data using a POST request
