@@ -55,6 +55,7 @@
               credentials:"include"
             });
             if (!res.ok) throw new Error('Not authenticated');
+            const user = await res.json()
           }
         }
 
