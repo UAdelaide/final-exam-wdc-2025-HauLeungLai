@@ -95,8 +95,8 @@ async function main(){
                     res.json(rows);
             }catch (err) {
                 console.error(err);
-                res.status(500).json({ error})
+                res.status(500).json({ error: 'Failed to fetch walkers summary.'});
             }
-        })
+        });
     }
 }
