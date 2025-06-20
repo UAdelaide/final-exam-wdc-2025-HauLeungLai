@@ -62,7 +62,7 @@ async function main(){
         app.get('/api/walkrequests/open', async (req, res) => {
             try {
                 const [rows] = await connection.execute(`
-                    
+                    SELECT wr.request
                     `)
             }
         })
