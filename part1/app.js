@@ -15,7 +15,7 @@ async function main(){
 
         // insert test data
         await connection.execute(`
-
+            
             `)
     }
 }
