@@ -13,7 +13,7 @@ async function main(){
             database: 'DogWalkService'
         });
 
-        // insert test data
+        // insert data for API testing
         await connection.execute(`
             INSERT INTO users(username, email, password_hash, role) VALUES
             ('alice123', 'alice@example.com', 'hashed123', 'owner'),
