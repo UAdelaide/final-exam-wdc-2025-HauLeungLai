@@ -52,7 +52,10 @@ async function main(){
                     FROM dogs d JOIN users u ON d.owner_id = u.user_id
                     `);
                     res.json(rows);
-            } catch()
+            } catch(err) {
+                console.error(err);
+                res.status
+            }
         })
     }
 }
