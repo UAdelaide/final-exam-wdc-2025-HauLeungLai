@@ -68,7 +68,8 @@ async function main(){
                     JOIN users u ON wr.owner_id = u.user_id
                     WHERE wr.status = 'open'
                     `);
-            }
+                    res.json(rows);
+            } catch
         })
     }
 }
