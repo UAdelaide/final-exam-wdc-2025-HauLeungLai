@@ -94,7 +94,7 @@
             const all = await res.json();
             dogs.value = all.filter(d => d.owner_username ===);
           }catch(err){
-            console.error
+            console.error('Failded to load dogs', err);
           }
         }
 
