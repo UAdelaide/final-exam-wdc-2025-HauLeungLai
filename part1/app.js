@@ -23,6 +23,17 @@ async function main(){
             ('emily456', 'emily@example.com', 'hashed111', 'owner');
             `);
         await connection.execute(`
+INSERT INTO Dogs (owner_id, name, size)
+VALUES
+((SELECT user_id FROM Users Where username = 'alice123'), 'Max', 'medium'),
+
+((SELECT user_id FROM Users Where username = 'carol123'), 'Bella', 'small'),
+
+((SELECT user_id FROM Users Where username = 'alice123'), 'Rocky', 'large'),
+
+((SELECT user_id FROM Users Where username = 'emily456'), 'Luna', 'medium'),
+
+((SELECT user_id FROM Users Where username = 'carol123'), 'Charlie', 'small');
 
             `)
     }
