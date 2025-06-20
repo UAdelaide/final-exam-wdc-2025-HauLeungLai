@@ -99,4 +99,6 @@ async function main(){
             }
         });
     }
-};
+}
+
+main();
