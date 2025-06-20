@@ -56,7 +56,9 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/choosedog', async (req, res) => {
-  
+  if (!req.session.user) {
+    return res.re
+  }
 })
 
 module.exports = router;
