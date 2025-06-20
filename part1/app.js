@@ -15,7 +15,7 @@ async function main(){
 
         // insert data for API testing
         await connection.execute(`
-            INSERT INTO Users(username, email, password_hash, role) VALUES
+            INSERT IGNORE INTO Users(username, email, password_hash, role) VALUES
             ('alice123', 'alice@example.com', 'hashed123', 'owner'),
             ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner'),
@@ -23,7 +23,7 @@ async function main(){
             ('emily456', 'emily@example.com', 'hashed111', 'owner');
             `);
         await connection.execute(`
-            INSERT INTO Dogs (owner_id, name, size) VALUES
+            INSERT IGNORE INTO Dogs (owner_id, name, size) VALUES
             ((SELECT user_id FROM Users Where username = 'alice123'), 'Max', 'medium'),
             ((SELECT user_id FROM Users Where username = 'carol123'), 'Bella', 'small'),
             ((SELECT user_id FROM Users Where username = 'alice123'), 'Rocky', 'large'),
@@ -39,7 +39,7 @@ async function main(){
             ((SELECT dog_id FROM Dogs WHERE name = 'Charlie' AND owner_id = (SELECT user_id FROM Users WHERE username = 'carol123')), '2025-06-10 17:00:00', 60, 'South Terrace', 'completed');
             `);
         await connection.execute(`
-            INSERT INTO Ratings (request_id, rating) VALUES
+            INSERT IGNORE INTO Ratings (request_id, rating) VALUES
             ((SELECT request_id FROM walkrequests WHERE status = 'completed' AND
             dog_id = (SELECT dog_id FROM dogs WHERE name = 'Charlie')), 5)
         `);
