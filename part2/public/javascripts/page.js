@@ -193,7 +193,7 @@ function login(){
             } else if(response.role === 'walker'){
                 window.location.href = "walker-dashboard.hmtl";
             } else {
-                alert("Unknown role")
+                alert("Unknown role: " + response.role);
             }
     };
 
