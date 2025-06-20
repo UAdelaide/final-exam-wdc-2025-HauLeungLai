@@ -21,6 +21,6 @@ async function main(){
             ('carol123', 'carol@example.com', 'hashed789', 'owner'),
             ('davewalker', 'dave@example.com', 'hashed000', 'walker'),
             ('emily456', 'emily@example.com', 'hashed111', 'owner');
-            `)
+            `);
     }
 }
