@@ -92,7 +92,7 @@
           try {
             const res = await fetch('/api/users/choosedog', {credentials: 'include'});
             const all = await res.json();
-            dogs.
+            dogs.value = all;
             }catch(err){
             console.error('Failded to load dogs', err);
           }
