@@ -56,9 +56,9 @@ app.post('/api/logout', (req, res) => {
             return res.status(500).json({error: 'Failed to logout'});
         }
         res.clearCookie('connect.sid');
-        res.json({message:})
-    })
-})
+        res.json({message:'Logged out successfully'});
+    });
+});
 
 // Export the app instead of listening here
 module.exports = app;
