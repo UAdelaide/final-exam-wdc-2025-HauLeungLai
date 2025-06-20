@@ -21,7 +21,8 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-// login verification
+// login verification logic
+app.post('/api/login', async (this.request,))
 
 // Export the app instead of listening here
 module.exports = app;
