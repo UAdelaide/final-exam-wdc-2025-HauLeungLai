@@ -92,8 +92,7 @@
           try {
             const res = await fetch('/api/dogs');
             const all = await res.json();
-            dogs.value = all.filter(d )
-          }catch(err){
+            }catch(err){
             console.error('Failded to load dogs', err);
           }
         }
