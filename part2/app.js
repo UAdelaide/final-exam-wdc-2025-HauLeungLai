@@ -47,7 +47,7 @@ app.post('/api/login', async (req, res) => {
                 username:rows[0].username,
                 role: rows[0].role
             };
-            // Respond with role then fontend know where to redirect 
+            // Respond with role then fontend know where to redirect
             return res.json({ role: rows[0].role});
         }
         res.status(401).json({error: 'Invalid credentials'})
@@ -57,7 +57,7 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
-// Logout route
+// endpoint to destory the user's session
 app.post('/api/logout', (req, res) => {
     req.session.destroy(err => {
         if (err) {
