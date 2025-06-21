@@ -65,8 +65,9 @@ app.post('/api/logout', (req, res) => {
             console.error('Error destroying session:', err);
             return res.status(500).json({error: 'Failed to logout'});
         }
-        
+        // Clear the session cookie from client
         res.clearCookie('connect.sid');
+        // Send confirmation back to frontend
         res.json({message:'Logged out successfully'});
     });
 });
