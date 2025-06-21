@@ -70,14 +70,14 @@
             //called the Dog CEO to get a image for each dog
             const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
             const imgData = await imgRes.json(); //Stored the image URL in each dog
-            dog.photo = imgData.message; //Rendered each dog's info and image in the page 
+            dog.photo = imgData.message; //Rendered each dog's info and image in the page
           }
           this.dogs = dogs;
         }catch (err) {
           console.error('Failed to load dogs: ', err);
         }
       },
-
+      
       methods: {
         async handleLogin() {
           try {
