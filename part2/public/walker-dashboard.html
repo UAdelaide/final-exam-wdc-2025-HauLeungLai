@@ -49,7 +49,7 @@
         const error = ref('');
         const currentUserId = ref(null);
 
-        // get 
+        // get current logged-in user 
         async function getCurrentUser(){
           try {
             const res = await fetch('/api/users/me', {
