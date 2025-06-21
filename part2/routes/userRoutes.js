@@ -68,7 +68,7 @@ router.get('/choosedog', async (req, res) => {
       `SELECT d.dog_id, d.name FROM Dogs d JOIN Users u ON d.owner_id = u.user_id WHERE u.username = ?`,
       [req.session.user.username]
     );
-    res.json(rows);
+    res.json(rows); //return the list of owned dogs 
   }catch (err) {
     console.error ('Fetch dog list fail', err);
     res.status(500).json({error: 'Server Error'});
