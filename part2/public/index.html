@@ -63,9 +63,11 @@
 
       async mounted() {
         try {
+          // fetch all the dogs from /api/dogs
           const res = await fetch('/api/dogs');
           const dogs = await res.json();
           for (const dog of dogs) {
+            //called the 
             const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
             const imgData = await imgRes.json();
             dog.photo = imgData.message;
