@@ -27,7 +27,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/dogs', dogRoutes);
 
-// login verification logic
+// login endpoint to verify creden
 app.post('/api/login', async (req, res) => {
     const { username, password } = req.body;
 
