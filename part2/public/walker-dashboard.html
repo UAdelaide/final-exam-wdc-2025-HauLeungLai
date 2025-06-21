@@ -57,7 +57,7 @@
             });
             if (!res.ok) throw new Error('Not authenticated');
             const user = await res.json();
-            currentUserId.value = user.user_id;
+            currentUserId.value = user.user_id; // Save walker_id from session
             console.log('Current User ID:', currentUserId.value);
           } catch (err) {
             error.value = 'Failed to get current user';
@@ -65,7 +65,7 @@
           }
         }
 
-        
+
         async function loadWalkRequests() {
           try {
             const res = await fetch('/api/walks');
