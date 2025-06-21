@@ -33,7 +33,7 @@ app.post('/api/login', async (req, res) => {
 
     try {
         const conn = await pool.getConnection();
-        // Query to verify username and password 
+        // Query to verify username and password
         const [rows] = await conn.execute(
             `SELECT user_id, username, role FROM Users WHERE username = ? AND password_hash = ?`,
             [username, password]
@@ -41,6 +41,7 @@ app.post('/api/login', async (req, res) => {
         conn.release();
 
         if (rows.length > 0){
+            // store user info in session
             req.session.user = {
                 user_id: rows[0].user_id,
                 username:rows[0].username,
