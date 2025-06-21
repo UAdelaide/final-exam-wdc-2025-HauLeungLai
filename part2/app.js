@@ -33,6 +33,7 @@ app.post('/api/login', async (req, res) => {
 
     try {
         const conn = await pool.getConnection();
+        // Query to verify username and password 
         const [rows] = await conn.execute(
             `SELECT user_id, username, role FROM Users WHERE username = ? AND password_hash = ?`,
             [username, password]
