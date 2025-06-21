@@ -93,7 +93,7 @@
           try {
             const res = await fetch('/api/users/choosedog', {credentials: 'include'});
             const all = await res.json();
-            dogs.value = all;
+            dogs.value = all; // store dog list in reactive state
             }catch(err){
             console.error('Failded to load dogs', err);
           }
