@@ -67,7 +67,7 @@
           const res = await fetch('/api/dogs');
           const dogs = await res.json();
           for (const dog of dogs) {
-            //called the 
+            //called the Dog CEO to get a image for each dog 
             const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
             const imgData = await imgRes.json();
             dog.photo = imgData.message;
