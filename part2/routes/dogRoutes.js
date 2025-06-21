@@ -13,4 +13,4 @@ router.get('/', async (req, res) => {
     }
 });
 
-module.exports = router; //
+module.exports = router; // Export the router to be used in app.js
