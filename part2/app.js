@@ -59,11 +59,13 @@ app.post('/api/login', async (req, res) => {
 
 // endpoint to destory the user's session
 app.post('/api/logout', (req, res) => {
+    // Destory the session on the server
     req.session.destroy(err => {
         if (err) {
             console.error('Error destroying session:', err);
             return res.status(500).json({error: 'Failed to logout'});
         }
+        
         res.clearCookie('connect.sid');
         res.json({message:'Logged out successfully'});
     });
