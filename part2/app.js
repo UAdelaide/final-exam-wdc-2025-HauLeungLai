@@ -18,7 +18,7 @@ app.use(session({
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 const dogRoutes = require('./routes/dogRoutes');
-
+// Inport MySQL connection pool
 const pool = require('./models/db');
 
 
