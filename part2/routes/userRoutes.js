@@ -67,7 +67,7 @@ router.get('/choosedog', async (req, res) => {
   }
   try {
     const [rows] = await db.query(
-      // Query dogs that belong to the logged in user 
+      // Query dogs that belong to the logged in user based on username
       `SELECT d.dog_id, d.name FROM Dogs d JOIN Users u ON d.owner_id = u.user_id WHERE u.username = ?`,
       [req.session.user.username]
     );
