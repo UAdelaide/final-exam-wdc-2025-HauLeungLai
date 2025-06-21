@@ -78,8 +78,8 @@
 
 d
         onMounted(async() => {
-          await getCurrentUser(); 
-          await loadWalkRequests();
+          await getCurrentUser(); //get current walker ID
+          await loadWalkRequests(); // load available walks
         });
 
         // logout handle
