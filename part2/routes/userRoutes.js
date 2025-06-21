@@ -59,7 +59,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// GetOwnerDog Session 
+// Return list of dogs for current login 
 router.get('/choosedog', async (req, res) => {
   if (!req.session.user) {
     return res.status(401).json({ error: 'Not login yet'});
