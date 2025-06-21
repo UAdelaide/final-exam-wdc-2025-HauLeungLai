@@ -80,9 +80,10 @@
       },
 
       methods: {
-        // called when login form is submitted 
+        // called when login form is submitted
         async handleLogin() {
           try {
+            // send login data to server
             const response = await fetch('/api/login',{
               method: 'POST',
               headers: { 'Content-Type': 'application/json'},
