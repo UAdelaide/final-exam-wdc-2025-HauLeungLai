@@ -47,6 +47,7 @@ app.post('/api/login', async (req, res) => {
                 username:rows[0].username,
                 role: rows[0].role
             };
+            // Respond with role then fontend know where to redirect 
             return res.json({ role: rows[0].role});
         }
         res.status(401).json({error: 'Invalid credentials'})
